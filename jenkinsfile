@@ -1,0 +1,22 @@
+
+node{
+    try{
+        stage('checkout code'){
+        steps{
+            checkout scm
+        }
+    }
+    stage('extract data'){
+        steps{
+            bat "C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\python.exe
+ extract.py"
+        }
+    }
+    }
+    catch(err){
+        echo "pipeline error: ${err}"
+    }
+    finally{
+        echo "pipeline completed"
+    }
+}
