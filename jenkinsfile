@@ -8,7 +8,7 @@ node{
     }
     stage('extract data'){
         steps{
-            bat "C:\Users\LENOVO\AppData\Local\Programs\Python\Python313\python.exe
+            bat "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe
  extract.py"
         }
     }
