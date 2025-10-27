@@ -5,17 +5,15 @@ node{
         
             checkout scm
         }
-    }
-    stage('extract data'){
+    
+       stage('extract data'){
         
             bat "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\python.exe extract.py"
         
     }
-    
-    catch(err){
+    }catch(err) {
         echo "pipeline error: ${err}"
-    }
-    finally{
+    } finally{
         echo "pipeline completed"
     }
 }
